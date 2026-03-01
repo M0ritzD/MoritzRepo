@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     selector: 'app-dashboard-page',
     standalone: true,
     imports: [],
-    template: `<!-- TODO: Dashboard-Page Template -->`,
+    templateUrl: './dashboard-page.component.html',
     styles: [],
 })
 export class DashboardPageComponent { }
