@@ -1,0 +1,270 @@
+<html><head><meta charset="utf-8"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#2b8cee",
+          "background-light": "#f6f7f8",
+          "background-dark": "#101922",
+        },
+        fontFamily: {
+          "display": ["Inter"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
+</head><body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full">
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col z-50">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg text-white">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-none">EduPlatform</h1>
+<p class="text-xs text-slate-500 mt-1 uppercase tracking-wider">Academic Portal</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 p-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">collections_bookmark</span>
+<span class="text-sm font-bold">Programs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500">description</span>
+<span class="text-sm font-medium">Applications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500">person</span>
+<span class="text-sm font-medium">Profile</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+<div class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="Close up portrait of a student" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy_zM_ZmUmBTVVzZkgwBlynMbzqLY4l0hsRWDEmrReS4CYJA7Oa15dqqsehO9LA0owfCn6xqlaIkfkk_RFZWm8e2IZFGHV_bpcA11EDjk81u_6osvXILAHtnMdelFZYnFP6bttC4b5Pwh7qFOc1w4YabzH6PxoqHV5qnSmSaYa5ZkXd0zITpZ8HmUwQdjdP8QHUQhrx5IooEN5jlsdsm7GERg3byWXllus3VUgY7CKmK3lSsJOi8EvKXHtkOICuBq5auaaK9Sgxr4"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold truncate">Alex Johnson</p>
+<p class="text-xs text-slate-500 truncate">Candidate #4902</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-64 min-h-screen">
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80 px-8 py-4 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-bold">Master Programs</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary">search</span>
+<input class="pl-10 pr-4 py-2 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 rounded-lg text-sm w-80 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Search programs or universities..." type="text"/>
+</div>
+<button class="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+<button class="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<div class="p-8">
+<!-- Hero Section -->
+<div class="mb-10 bg-gradient-to-r from-primary to-blue-600 rounded-2xl p-8 text-white shadow-xl shadow-primary/20">
+<h1 class="text-3xl font-black mb-2 tracking-tight">Master Programs Dashboard</h1>
+<p class="text-blue-100 max-w-2xl text-lg">Your gateway to top-tier specialized education. Browse, compare, and apply to the best AI and Finance programs worldwide.</p>
+</div>
+<!-- Section: AI Programs -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<div class="w-1 h-6 bg-primary rounded-full"></div>
+<h3 class="text-2xl font-bold tracking-tight">Master KI (Artificial Intelligence)</h3>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- AI Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-100 dark:border-slate-800 group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract visualization of neural networks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp3oceUtcil7EKezrwjZHTxIDZaMtl5kw8zV3MhPbsHnmkl1h0EDyOM2NNuY5K8vWasd4tLEC3WUmAq1J9eaaenjS3pKj32W1Ab4U0k7Wbk-h3TScG4QBDtpNwAAbVfbre0mqL6YVQQoV-_pfiuGrNcthhDboe0B-0bbXAHFAlwBNcj-NCSPlX9tQS7UZkAdEqMvMKGUoarP39fFgakENKG-WhgUm_RKslGizf7-B4DyjJ8mZ0R3NHOVVglqZJHcdhwhGmrHyFaBg"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<div class="w-10 h-10 bg-slate-50 rounded flex items-center justify-center text-primary font-black italic">TUM</div>
+</div>
+</div>
+<div class="p-5">
+<h4 class="text-lg font-bold mb-1">M.Sc. Artificial Intelligence</h4>
+<p class="text-slate-500 text-sm mb-4">Technical University of Munich</p>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Duration</span>
+<span class="text-sm font-semibold">2 Years</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Tuition</span>
+<span class="text-sm font-semibold">€1,500/sem</span>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold py-2 rounded-lg transition-all">Details</button>
+</div>
+</div>
+<!-- AI Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-100 dark:border-slate-800 group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Silicon chips and futuristic hardware" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYcj84QimW-9jtNPosFmdd0g9kPa5sAGy-MWqJ4fwEfLkAgf_PEXn695QlMTWKbuaZoPiM_EOMeL-IULJR01IOl0DySUuw1LIJuAbjmHuAstSxJc5SwL5khgLSvmqFa-QgLs7pkDizE4E-22I7fsa45AqK0m4JIoanx98NvQ1HloVXBcAWnDcgIKORJKFy1cMvrB9gs7swg1ZzsAE43hrHqOp6gDZmGBNBdKnS-A9JkvNhdu1pUg-EPwyLY2czntbMsturK4Z76m0"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<div class="w-10 h-10 bg-slate-50 rounded flex items-center justify-center text-primary font-black">ETH</div>
+</div>
+</div>
+<div class="p-5">
+<h4 class="text-lg font-bold mb-1">AI &amp; Machine Learning</h4>
+<p class="text-slate-500 text-sm mb-4">ETH Zurich</p>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Duration</span>
+<span class="text-sm font-semibold">1.5 Years</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Tuition</span>
+<span class="text-sm font-semibold">€2,200/sem</span>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold py-2 rounded-lg transition-all">Details</button>
+</div>
+</div>
+<!-- AI Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-100 dark:border-slate-800 group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Blue digital light patterns abstract" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3DSatcwN2jq9gwij6yJVSqiuBsIoSY9-Nti8VUfBYSwh7b95Wy5mco4VM1G-g6uwS_QN5sqCqxmTOZmNZUCbFSf4rAKabiImsgZiMRO1i1deI5Y6BTOVKIiS8WSxrrxmtutfQDNxIHxinfFv9Cuo_Sfs2IybdnEY9iJh9XHpaKrG2RlvA19hm9MMKSZVo8oz7hW4ENTxRMNZRko2OuFZxolQIhFD_FTkqkrEzmswnGEt8J2PHnJe4DqfOBnJSdy-EOZF2m4WjtOw"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<div class="w-10 h-10 bg-slate-50 rounded flex items-center justify-center text-primary font-black">TUD</div>
+</div>
+</div>
+<div class="p-5">
+<h4 class="text-lg font-bold mb-1">Computational Intelligence</h4>
+<p class="text-slate-500 text-sm mb-4">Delft University of Technology</p>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Duration</span>
+<span class="text-sm font-semibold">2 Years</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Tuition</span>
+<span class="text-sm font-semibold">€2,000/sem</span>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary/10 hover:bg-primary hover:text-white text-primary font-bold py-2 rounded-lg transition-all">Details</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Finance Programs -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<div class="w-1 h-6 bg-primary rounded-full"></div>
+<h3 class="text-2xl font-bold tracking-tight">Master Finance</h3>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Finance Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-100 dark:border-slate-800 group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Stock market candle charts display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzIjEk8UFBRWa70UN_cGxM19Sf7eA8pnmElVLclpz1S0-65oULMI2k_yVV3ebVgR9K4NMV6bA9C6qxxspzy7DB00NqkGwJX1Gau3t2hhKWOKWpguRRHc5FuXRkG4w6lB-XRfbRu7xjNX4SCielV_mK-DnDFn0c98A7KGeXiOPvCOZBBRXhM8Ge1c-PBSCNyoAAviLlrVodEVafoGBcbuqQ8Kjd3FHIRYSUmA_D_NncvrrVvWmU1nZOTfzHBeF8BX0azmjElJpWPic"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<div class="w-10 h-10 bg-slate-50 rounded flex items-center justify-center text-primary font-black">LSE</div>
+</div>
+</div>
+<div class="p-5">
+<h4 class="text-lg font-bold mb-1">M.Sc. Finance &amp; Economics</h4>
+<p class="text-slate-500 text-sm mb-4">London School of Economics</p>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Duration</span>
+<span class="text-sm font-semibold">1 Year</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Tuition</span>
+<span class="text-sm font-semibold">£32,000/yr</span>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary text-white font-bold py-2 rounded-lg shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">Apply Now</button>
+</div>
+</div>
+<!-- Finance Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-100 dark:border-slate-800 group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Stacks of international coins closeup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJRh0H1psU8zj9IO-SXYGGc-MCWz4kaLvIlzpEGBwMwSDh4ko5G8MXknukydK_DhIflRPaHnIwQhJSaPPpDxLdUMzQxB15niAKIaeKXMmh8bDq9cMyWARuvPSdyO6sPSF_F04kVCtt9SDWnPbKeNWan5YZyLYik8L0zYcp_lvYCkMJpnMSwoUWKGsRX9NtaTxO8kGRBGs63FhNU2qfMQTVopHqI71P1ZHq4WAnwp468XQjrKv8jYeIFgu8S1oacxQjtn_R9UaLcpA"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<div class="w-10 h-10 bg-slate-50 rounded flex items-center justify-center text-primary font-black">HEC</div>
+</div>
+</div>
+<div class="p-5">
+<h4 class="text-lg font-bold mb-1">International Finance</h4>
+<p class="text-slate-500 text-sm mb-4">HEC Paris</p>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Duration</span>
+<span class="text-sm font-semibold">18 Months</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Tuition</span>
+<span class="text-sm font-semibold">€28,000/sem</span>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary text-white font-bold py-2 rounded-lg shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">Apply Now</button>
+</div>
+</div>
+<!-- Finance Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-slate-100 dark:border-slate-800 group">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Office building reflective windows architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7krOjQpIyEDOFmzpACzC2aqaZ7KLjFR3ISR1adE1ozEM0Ic0M5UfmyIIomYylYdPyjXbO7y26f5cQ0B4F0WNJprhfUCF9P3qINg-nYPxWnNgZ5ptiyskzLzGSZsUltPVNLyVW3CZ9FqWWsoyqODE6ZbdIkvmE_iXYxnZurCEU44oOloa62qscpn7CLwH_TYGK6PstUcYB_eTbxSM_S_ZHPheF_0RXAb6fsO-ZU-dkQ0nWLUUo41GMayk0owgy6PZc3hssLjy0Oqk"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-2 rounded-lg shadow-sm">
+<div class="w-10 h-10 bg-slate-50 rounded flex items-center justify-center text-primary font-black">HSG</div>
+</div>
+</div>
+<div class="p-5">
+<h4 class="text-lg font-bold mb-1">Banking and Finance</h4>
+<p class="text-slate-500 text-sm mb-4">University of St. Gallen</p>
+<div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Duration</span>
+<span class="text-sm font-semibold">2 Years</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Tuition</span>
+<span class="text-sm font-semibold">CHF 3,500/sem</span>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary text-white font-bold py-2 rounded-lg shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">Apply Now</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+```</body></html>
