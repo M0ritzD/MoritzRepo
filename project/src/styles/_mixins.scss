@@ -1,0 +1,22 @@
+// _mixins.scss – Wiederverwendbare SCSS-Mixins
+
+// Responsive Breakpoint Mixin
+@mixin respond-to($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+// Flexbox Centering
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Truncate Text
+@mixin truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
