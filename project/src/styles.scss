@@ -1,0 +1,7 @@
+// styles.scss – Globale Styles der Anwendung
+// Importiert die einzelnen Style-Partials
+
+@use 'styles/variables' as *;
+@use 'styles/reset';
+@use 'styles/typography';
+@use 'styles/mixins' as *;
